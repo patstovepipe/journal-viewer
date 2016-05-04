@@ -1,12 +1,12 @@
 <h1>Journal Control</h1>
-<p>Search button does command "journalctl -b"</p>
-<%= form_for ( url: filter_path, method: :get ) :journalsearch do |f| %>
+<p>Add flags to journalctl (ex. -b) which gets journal from last boot</p>
+<%= form_tag("/search", method: "get") do %>
 	<p>
-		<%= f.submit "Search" %>
+		<%= text_field_tag :flags %>
+		<%= submit_tag("Search") %>
 	</p>
 <% end %>
 
-<%= will_paginate @journalrows %>
 <table class="table">
 	<% @journalrows.each do |journalrow| %>
 		<tr>

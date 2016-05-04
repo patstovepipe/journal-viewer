@@ -1,0 +1,16 @@
+<h1>Journal Control</h1>
+<p>Search button does command "journalctl -b"</p>
+<%= form_for ( url: filter_path, method: :get ) :journalsearch do |f| %>
+	<p>
+		<%= f.submit , value = "Search" %>
+	</p>
+<% end %>
+
+<%= will_paginate @journalrows %>
+<table class="table">
+	<% @journalrows.each do |journalrow| %>
+		<tr>
+			<td><%= journalrow.text %></td>
+		</tr>
+	<% end %>
+</table>
