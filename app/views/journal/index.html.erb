@@ -2,15 +2,16 @@
 <p>Add flags to journalctl (ex. -b) which gets journal from last boot</p>
 <%= form_tag("/search", method: "get") do %>
 	<p>
-		<%= text_field_tag :flags %>
+		<%= select_tag(:flag, options_for_select(@flags)) %>
+		<!-- %= select_tag(:unit, options_for_select(@units)) %-->
 		<%= submit_tag("Search") %>
 	</p>
 <% end %>
 
 <table class="table">
-	<% @journalrows.each do |journalrow| %>
+	<% @journalrows.each do |row| %>
 		<tr>
-			<td><%= journalrow.text %></td>
+			<td><%= row %></td>
 		</tr>
 	<% end %>
 </table>
