@@ -1,6 +1,6 @@
 class JournalController < ApplicationController
   # find better place to store this ddl data
-  FLAGS = { "from boot" => "-b", "kernel ring buffer" => "-k", "from date" => "--since=" }
+  FLAGS = { "from boot" => "-b", "from date" => "--since=", "kernel ring buffer" => "-k", "unit messages" => "-u" }
 
   def index
     #debugger
