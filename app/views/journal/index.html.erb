@@ -3,7 +3,7 @@
 <%= form_tag("/search", method: "get") do %>
 	<p>
 		<%= select_tag(:flag, options_for_select(@flags)) %>
-		<!-- %= select_tag(:unit, options_for_select(@units)) %-->
+		<%= select_tag(:unit, options_for_select(@units), :style=>"display:none") %>
 		<%= submit_tag("Search") %>
 	</p>
 <% end %>
@@ -15,3 +15,14 @@
 		</tr>
 	<% end %>
 </table>
+
+<script>
+	$(function() {
+		$("#flag").change(function() {
+			$("#unit").hide();
+			if ($(this).val() == "-k") {
+				$("#unit").show();
+			}
+		});
+	});
+</script>
