@@ -1,5 +1,5 @@
 <h1>Journal Control</h1>
-<p>Add flags to journalctl (ex. -b) which gets journal from last boot</p>
+<p>Add flags to journalctl (ex. -b) which gets journal from last boot.</p>
 <%= form_tag("/search", method: "get") do %>
 	<p>
 		<%= select_tag(:flag, options_for_select(@flags)) %>
