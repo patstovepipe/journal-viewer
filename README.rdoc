@@ -1,4 +1,4 @@
 == README
 
 This was planned to be a Ruby on Rails project to view journal[https://wiki.archlinux.org/index.php?title=Systemd&redirect=no#Journal] for systemd[https://wiki.archlinux.org/index.php/Systemd].
-Working on other prokects now so nothing useful will be here currently.
+Working on other projects now so nothing useful will be here currently.
